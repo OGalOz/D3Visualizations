@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="JS/d3.min.js"></script>
+    <script src="JS/ExpandingBarChart.js"></script>
+    <script src="JS/BC_data/ticks_data.js"></script>
+    <!-- <script src="BC_data.js"></script> --!>
+    <!--<script src="tmpC1.js"></script> --!>
+    <style>
+        .bar { fill: steelblue;
+            outline: thin solid black;}
+        .bar:hover { fill: red;}
+        h1 {position: absolute; left: 500px; top: 0px;}
+    </style>
+</head>
+<body>
+
+    <script>
+        /*
+        To Do: 
+            Create a back-up button
+        */
+
+        // set the dimensions and margins of the graph - this is always fixed
+        var margin = {top: 40, right: 40, bottom: 20, left: 120};
+        var width = 1200 - margin.left - margin.right;
+        var height = 850 - margin.top - margin.bottom;
+        var graph_origin = [margin.left, height - margin.bottom];
+        var x_axis_length = width - 60;
+        var y_axis_length = height - 60;
+        var tick_length = 10;
+        var tick_width = 2;
+        var text_dist = 20;
+        var ticks_font_weight = "normal";
+        var ticks_font_size = 15;
+        // We generally keep the current range in the following list. So when we back up
+        // we go backwards 2 indexes from the end.
+        var back_up_list = ["start_data"];
+        // This determines whether we compute or take data from existing
+        // * It must match the data provided.
+        var scaffold_range_threshold = 1000;
+        FullProgram();
+        
+</script>
+
+</body>
+</html>
+
+
+
+
